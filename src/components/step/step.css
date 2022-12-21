@@ -1,0 +1,173 @@
+.STEP__main-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.STEP-container {
+  width: 500px;
+  height: 800px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.STEP__top-bar {
+  width: 100%;
+  height: 120px;
+  background-color: #08284a;
+
+  border-radius: 10px 10px 0px 0px;
+  color: #fff;
+}
+
+.STEP__topBar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.STEP__title {
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.STEP_topBar-desc {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.STEP__topbar-process-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.STEP__topBar-progress {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 23px;
+  width: 400px;
+}
+
+.STEP__topBar-progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 23px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.STEP__topBar-step {
+  padding-top: 5px;
+}
+
+.STEP__first-container {
+  height: 170px;
+}
+
+.STEP_conteiner-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.STEP__second-title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.STEP__inpust-one {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.STEP_conteiner-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.STEP__two-icons-container {
+  display: flex;
+  padding-top: 10px;
+  gap: 50px;
+}
+
+.STEP__icons {
+  width: 60px;
+  height: 60px;
+}
+
+.STEP__two-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 90px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.STEP__small-input {
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.STEP_conteiner-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.STEP_conteiner-three div {
+  font-size: 16px;
+}
+
+.STEP_conteiner-four {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.STEP__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  width: 80%;
+  height: 50px;
+  border: none;
+  background-color: #08284a;
+  color: #f9fafb;
+  font-size: 18px;
+}

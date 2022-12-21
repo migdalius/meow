@@ -1,0 +1,64 @@
+.Nav__main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #08284a;
+  height: 100px;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.Nav__logo {
+  width: 160px;
+}
+
+.Nav__search-section {
+  width: 650px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#pet-select {
+  width: 150px;
+  border: none;
+  padding-left: 10px;
+  margin-right: 5px;
+}
+
+.Nav__search-icon {
+  color: #08284a;
+}
+
+.Nav__searchBar {
+  border-left: 1px solid #ddd;
+  height: 90%;
+  width: 430px;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.Nav__user-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.Nav__user-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Nav__user-detail p {
+  font-size: 16px;
+}
+
+.Nav__icons-size {
+  cursor: pointer;
+}
+input {
+  border: none;
+}
