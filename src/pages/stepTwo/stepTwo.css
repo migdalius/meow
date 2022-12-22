@@ -1,0 +1,58 @@
+.STEP__topBar-progress-2 {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 23px;
+  width: 400px;
+}
+
+.STEP__topBar-progress-value-2 {
+  animation: load2 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 23px;
+  width: 0;
+}
+
+@keyframes load2 {
+  0% {
+    width: 16%;
+  }
+  100% {
+    width: 32%;
+  }
+}
+
+.STEPTWO-constainer {
+  width: 150px;
+  height: 90px;
+  border: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.STEPTWO-input-container {
+  display: flex;
+  justify-content: center;
+}
+.STEPTWO__input {
+  border: 1px solid #ddd;
+  width: 35%;
+  height: 40px;
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 15px;
+}
+
+.STEPTWO__input-kg {
+  border: 1px solid #ddd;
+  border-left: none;
+  width: 15%;
+  height: 40px;
+  border-radius: 0px 5px 5px 0px;
+  padding-left: 15px;
+}

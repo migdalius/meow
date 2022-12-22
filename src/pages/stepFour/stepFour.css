@@ -1,0 +1,42 @@
+.STEP__topBar-progress-4 {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 23px;
+  width: 400px;
+}
+
+.STEP__topBar-progress-value-4 {
+  animation: load4 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 23px;
+  width: 0;
+}
+
+@keyframes load4 {
+  0% {
+    width: 48%;
+  }
+  100% {
+    width: 64%;
+  }
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.test {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}

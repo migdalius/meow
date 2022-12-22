@@ -1,4 +1,5 @@
 import "../hero/hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,24 +20,29 @@ const Hero = () => {
         </div>
         <div className="HERO__chose-container">
           <div className="HERO__item-dog">
-            <div className="HERO__single-item">
-              <h2>Pies</h2>
-              <img
-                src="https://www.szybkauprawa.pl/img/kot.png"
-                alt=""
-                className="HERO__cat-img"
-              />
-            </div>
+            <Link to="/krok-1">
+              <div className="HERO__single-item">
+                <h2>Pies</h2>
+                <img
+                  src="https://www.szybkauprawa.pl/img/kot.png"
+                  alt=""
+                  className="HERO__cat-img"
+                />
+              </div>
+            </Link>
           </div>
+
           <div className="HERO__item-cat">
-            <div className="HERO__single-item">
-              <h2>Kot</h2>
-              <img
-                src="https://www.szybkauprawa.pl/img/kot.png"
-                alt=""
-                className="HERO__cat-img"
-              />
-            </div>
+            <Link to="/krok-1">
+              <div className="HERO__single-item">
+                <h2>Kot</h2>
+                <img
+                  src="https://www.szybkauprawa.pl/img/kot.png"
+                  alt=""
+                  className="HERO__cat-img"
+                />
+              </div>
+            </Link>
           </div>
         </div>
         {/* <div className="HERO__baner-main">
