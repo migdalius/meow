@@ -2,11 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-import StepOne from "./pages/stepOne/StepOne";
+
 import StepTwo from "./pages/stepTwo/StepTwo";
 import StepThree from "./pages/stepThree/StepThree";
 import StepFour from "./pages/stepFour/StepFour";
 import StepFive from "./pages/stepFive/StepFive";
+import StepOne from "./pages/stepOne/StepOne";
 function App() {
   return (
     <BrowserRouter>
