@@ -1,46 +1,114 @@
 import Navigation from "../../components/nav/Navigation";
 import { Link } from "react-router-dom";
-import "../stepFour/stepFour.css";
+
+import styled, { keyframes } from "styled-components";
+import TopBar from "../../components/steps/TopBar";
+import NextButton from "../../components/buttons/NextButton";
+
+const MainContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+`;
+
+const Container = styled.div`
+  width: 650px;
+  height: 820px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+`;
+
+const SecondContainer = styled.div`
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const ThirdContainer = styled.div`
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 70px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+`;
+
+const FourthContainer = styled.div`
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+const SecondTitle = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+`;
+
+const TwoIconsContainer = styled.div`
+  display: flex;
+  padding-top: 10px;
+  gap: 50px;
+`;
+
+const IconsImg = styled.img`
+  width: 50px;
+  height: 50px;
+`;
+
+const ButtonImageContainer = styled.button`
+  width: 120px;
+  height: 90px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:active {
+    border: 3px solid #08284a;
+  }
+`;
+
+const Line = styled.hr`
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #08284a;
+`;
 
 const StepFour = () => {
   return (
     <div className="app">
       <Navigation />
-      <section className="STEP__main-section">
-        <div className="STEP-container">
-          <div className=" STEP__top-bar">
-            <div className="STEP__topBar-title">
-              <div className="STEP__title">Konfigurator</div>
-              <div className="STEP_topBar-desc">
-                Wybierz idealnie dopasowaną karmę
-              </div>
-              <div className="STEP__topbar-process-container">
-                <div className="STEP__topBar-progress-4">
-                  <div className="STEP__topBar-progress-value-4"></div>
-                </div>
-              </div>
-              <div className="STEP__topBar-step">
-                <p>Krok 4 z 6</p>
-              </div>
-            </div>
-          </div>
+      <MainContainer>
+        <Container>
+          <TopBar step={"4"} />
 
-          <div className="STEP__first-container STEP_conteiner-two">
-            <p className="STEP__second-title mt-60">
+          <SecondContainer>
+            <SecondTitle>
               Czy "name" ma alegrię lub nietolerancje pokarmową.
-            </p>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer">
+            </SecondTitle>
+            <TwoIconsContainer>
+              <ButtonImageContainer>
                 <p>Nie ma alergii</p>
-              </button>
-              <button className="STEPTHREE-constainer">
+              </ButtonImageContainer>
+              <ButtonImageContainer>
                 <p>Ma alergię na</p>
-              </button>
-            </div>
-            <div className="STEP_topBar-desc mr-bottom">
+              </ButtonImageContainer>
+            </TwoIconsContainer>
+            {/* <div className="STEP_topBar-desc mr-bottom">
               Zaznacz jednen lub więcej
-            </div>
-            <div className="STEP__two-icons-container">
+            </div> */}
+            {/* <TwoIconsContainer>
               <label for="test1">
                 <input
                   type="radio"
@@ -59,8 +127,8 @@ const StepFour = () => {
                 />{" "}
                 Indyk
               </label>
-            </div>
-            <div className="STEP__two-icons-container">
+            </TwoIconsContainer> */}
+            {/* <TwoIconsContainer>
               <label for="test1">
                 <input
                   type="radio"
@@ -79,71 +147,40 @@ const StepFour = () => {
                 />{" "}
                 Wołowina
               </label>
-            </div>
-          </div>
-          <div className="mb-60"></div>
-          <hr></hr>
-          <div className="STEP__first-container STEP_conteiner-three test">
-            <p className="STEP__second-title">Jaką karmę lubi "name"?</p>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTWO-constainer">
-                <img
-                  src="../img/icons/karma_1.png"
-                  alt=""
-                  className="STEP__icons"
-                />
+            </TwoIconsContainer> */}
+          </SecondContainer>
+
+          <Line />
+          <ThirdContainer>
+            <SecondTitle>Jaką karmę lubi "name"?</SecondTitle>
+            <TwoIconsContainer>
+              <ButtonImageContainer>
+                <IconsImg src="../img/icons/karma_1.png" />
                 <p>Sucha</p>
-              </button>
-              <button className="STEPTWO-constainer">
-                <img
-                  src="../img/icons/karma_2.png"
-                  alt=""
-                  className="STEP__icons"
-                />
+              </ButtonImageContainer>
+              <ButtonImageContainer>
+                <IconsImg src="../img/icons/karma_2.png" />
                 <p>Mokra</p>
-              </button>
-            </div>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTWO-constainer">
-                <img
-                  src="../img/icons/karma_3.png"
-                  alt=""
-                  className="STEP__icons"
-                />
+              </ButtonImageContainer>
+            </TwoIconsContainer>
+            <TwoIconsContainer>
+              <ButtonImageContainer>
+                <IconsImg src="../img/icons/karma_3.png" />
                 <p>Gotowana żywność</p>
-              </button>
-              <button className="STEPTWO-constainer">
-                <img
-                  src="../img/icons/karma_4.png"
-                  alt=""
-                  className="STEP__icons"
-                />
+              </ButtonImageContainer>
+              <ButtonImageContainer>
+                <IconsImg src="../img/icons/karma_4.png" />
                 <p>BARF</p>
-              </button>
-            </div>
-          </div>
-          <div className="STEP__first-container STEP_conteiner-four">
+              </ButtonImageContainer>
+            </TwoIconsContainer>
+          </ThirdContainer>
+          <FourthContainer>
             <Link to="/krok-5" className="STEP__link-button">
-              <button className="STEP__button">
-                Następny krok
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-arrow-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                  />
-                </svg>
-              </button>
+              <NextButton />
             </Link>
-          </div>
-        </div>
-      </section>
+          </FourthContainer>
+        </Container>
+      </MainContainer>
     </div>
   );
 };

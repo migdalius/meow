@@ -40,7 +40,7 @@ const load = keyframes`
     width: 0;
   }
   100% {
-    width: 16%;
+    width: 20%;
   }
 `;
 
@@ -68,7 +68,7 @@ const TopBarProgress = styled.div`
 const TopBarStep = styled.div`
   padding-top: 5px;
 `;
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <TopBarContainer>
       <TopBarTitle>
@@ -80,7 +80,7 @@ const TopBar = () => {
           </TopBarProgress>
         </TopBarProcessContainer>
         <TopBarStep>
-          <p>Krok 1 z 6</p>
+          <p>Krok {props.step} z 6</p>
         </TopBarStep>
       </TopBarTitle>
     </TopBarContainer>

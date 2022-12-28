@@ -8,6 +8,7 @@ import StepThree from "./pages/stepThree/StepThree";
 import StepFour from "./pages/stepFour/StepFour";
 import StepFive from "./pages/stepFive/StepFive";
 import StepOne from "./pages/stepOne/StepOne";
+import List from "./pages/list/List";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/krok-3" element={<StepThree />} />
         <Route path="/krok-4" element={<StepFour />} />
         <Route path="/krok-5" element={<StepFive />} />
+        <Route path="/lista-produktow" element={<List />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,41 +1,69 @@
-import "../stepFive/stepFive.css";
 import Navigation from "../../components/nav/Navigation";
 import { Link } from "react-router-dom";
+import TopBar from "../../components/steps/TopBar";
+import styled, { keyframes } from "styled-components";
+import NextButton from "../../components/buttons/NextButton";
 
+const MainContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+`;
+
+const Container = styled.div`
+  width: 650px;
+  height: 820px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+`;
+
+const FiveContainer = styled.div`
+  height: 500px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ProblemContainer = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
+const ProblemButton = styled.button`
+  width: 150px;
+  height: 60px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+`;
 const StepFive = () => {
   return (
     <div className="app">
       <Navigation />
-      <section className="STEP__main-section">
-        <div className="STEP-container">
-          <div className=" STEP__top-bar">
-            <div className="STEP__topBar-title">
-              <div className="STEP__title">Konfigurator</div>
-              <div className="STEP_topBar-desc">
-                Wybierz idealnie dopasowaną karmę
-              </div>
-              <div className="STEP__topbar-process-container">
-                <div className="STEP__topBar-progress-5">
-                  <div className="STEP__topBar-progress-value-5"></div>
-                </div>
-              </div>
-              <div className="STEP__topBar-step">
-                <p>Krok 5 z 6</p>
-              </div>
-            </div>
-          </div>
-          <div className="STEP__five-container">
+      <MainContainer>
+        <Container>
+          <TopBar step={"5"} />
+          <FiveContainer>
             <div>
               <p className="STEP__second-title mt-60 mb-60">
                 Czy "name" jest po "sterylizacji / kastracji"
               </p>
             </div>
-            <div className="STEP__five-problem mb-60">
-              <button>Nie ma problemów</button>
-              <button>Cierpi na</button>
-            </div>
+            <ProblemContainer>
+              <ProblemButton>Nie ma problemów</ProblemButton>
+              <ProblemButton>Cierpi na</ProblemButton>
+            </ProblemContainer>
 
-            <div className="STEP__five-radio-container">
+            <GridContainer>
               <div className="STEP__five-grid-1">
                 <div>
                   <input type="radio" id="dewey" name="drone" value="dewey" />
@@ -104,30 +132,15 @@ const StepFive = () => {
                   <label for="dewey">Niperlipidemia</label>
                 </div>
               </div>
-            </div>
-          </div>
+            </GridContainer>
+          </FiveContainer>
           <div className="STEP__first-container STEP_conteiner-four">
             <Link to="/krok-5" className="STEP__link-button">
-              <button className="STEP__button">
-                Następny krok
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-arrow-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                  />
-                </svg>
-              </button>
+              <NextButton />
             </Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </MainContainer>
     </div>
   );
 };

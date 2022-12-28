@@ -1,136 +1,167 @@
 import Navigation from "../../components/nav/Navigation";
 import { Link } from "react-router-dom";
-import "../stepThree/stepThree.css";
+import styled, { keyframes } from "styled-components";
+import TopBar from "../../components/steps/TopBar";
+import NextButton from "../../components/buttons/NextButton";
 
+const MainContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+`;
+
+const Container = styled.div`
+  width: 650px;
+  height: 820px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+`;
+
+const SecondContainer = styled.div`
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const ThirdContainer = styled.div`
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 70px;
+`;
+
+const FourthContainer = styled.div`
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+const ButtonContainer = styled.button`
+  background-color: #fff;
+  width: 140px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+`;
+
+const ButtonImageContainer = styled.button`
+  width: 120px;
+  height: 90px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+`;
+
+const SecondTitle = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+`;
+
+const TwoIconsContainer = styled.div`
+  display: flex;
+  padding-top: 10px;
+  gap: 50px;
+`;
+
+const Line = styled.hr`
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #08284a;
+`;
+
+const IconsImg = styled.img`
+  width: 50px;
+  height: 50px;
+`;
 const StepThree = () => {
   return (
     <div className="app">
       <Navigation />
-      <section className="STEP__main-section">
-        <div className="STEP-container">
-          <div className=" STEP__top-bar">
-            <div className="STEP__topBar-title">
-              <div className="STEP__title">Konfigurator</div>
-              <div className="STEP_topBar-desc">
-                Wybierz idealnie dopasowaną karmę
-              </div>
-              <div className="STEP__topbar-process-container">
-                <div className="STEP__topBar-progress-3">
-                  <div className="STEP__topBar-progress-value-3"></div>
-                </div>
-              </div>
-              <div className="STEP__topBar-step">
-                <p>Krok 3 z 6</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="STEP__first-container STEP_conteiner-two">
-            <p className="STEP__second-title">Jaką sylwetkę ma "name"?</p>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer">
+      <MainContainer>
+        <Container>
+          <TopBar step={"3"} />
+          <SecondContainer>
+            <SecondTitle>Jaką sylwetkę ma "name"?</SecondTitle>
+            <TwoIconsContainer>
+              <ButtonContainer>
                 <p>Za chuda</p>
-              </button>
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+              <ButtonContainer>
                 <p>Idealna</p>
-              </button>
-            </div>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+            </TwoIconsContainer>
+            <TwoIconsContainer>
+              <ButtonContainer>
                 <p>Lekko zaokrąglona</p>
-              </button>
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+              <ButtonContainer>
                 <p>Otyła</p>
-              </button>
-            </div>
-          </div>
-          <hr></hr>
-          <div className="STEP__first-container STEP_conteiner-two">
-            <p className="STEP__second-title">Jaki "name" ma apetyt?</p>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+            </TwoIconsContainer>
+          </SecondContainer>
+          <Line />
+          <SecondContainer>
+            <SecondTitle>Jaki "name" ma apetyt?</SecondTitle>
+            <TwoIconsContainer>
+              <ButtonContainer>
                 <p>Wybredny</p>
-              </button>
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+              <ButtonContainer>
                 <p>Jest Niejadkiem</p>
-              </button>
-            </div>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+            </TwoIconsContainer>
+            <TwoIconsContainer>
+              <ButtonContainer>
                 <p>Ładnie je</p>
-              </button>
-              <button className="STEPTHREE-constainer">
+              </ButtonContainer>
+              <ButtonContainer>
                 <p>Pochłania Wszystko</p>
-              </button>
-            </div>
-          </div>
-          <hr></hr>
-          <div className="STEP__first-container STEP_conteiner-three mb-80">
-            <p className="STEP__second-title">Jak aktywny jest "name"?</p>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer-img btn-p">
+              </ButtonContainer>
+            </TwoIconsContainer>
+          </SecondContainer>
+          <Line />
+          <ThirdContainer>
+            <SecondTitle>Jak aktywny jest "name"?</SecondTitle>
+            <TwoIconsContainer>
+              <ButtonImageContainer>
                 <p>Śpioch</p>
-                <img
-                  src="../img/icons/sleep.png"
-                  alt=""
-                  className="STEPTHREE-img"
-                />
-              </button>
-              <button className="STEPTHREE-constainer-img ">
+                <IconsImg src="../img/icons/sleep.png" />
+              </ButtonImageContainer>
+              <ButtonImageContainer>
                 <p>Trochę aktywny</p>
-                <img
-                  src="../img/icons/pelny_energii.png"
-                  alt=""
-                  className="STEPTHREE-img"
-                />
-              </button>
-            </div>
-            <div className="STEP__two-icons-container">
-              <button className="STEPTHREE-constainer-img ">
+                <IconsImg src="../img/icons/pelny_energii.png" />
+              </ButtonImageContainer>
+            </TwoIconsContainer>
+            <TwoIconsContainer>
+              <ButtonImageContainer>
                 <p>Aktywny</p>
-                <img
-                  src="../img/icons/smycz.png"
-                  alt=""
-                  className="STEPTHREE-img"
-                />
-              </button>
-              <button className="STEPTHREE-constainer-img ">
+                <IconsImg src="../img/icons/smycz.png" />
+              </ButtonImageContainer>
+              <ButtonImageContainer>
                 <p>Bardzo aktywny</p>
-                <img
-                  src="../img/icons/bieganie.png"
-                  alt=""
-                  className="STEPTHREE-img"
-                />
-              </button>
-            </div>
-            <div className="squer-1">0-0.5h</div>
-            <div className="squer-2">0.5-1h</div>
-            <div className="squer-3">1-2h</div>
-            <div className="squer-4">3h+</div>
-          </div>
+                <IconsImg src="../img/icons/bieganie.png" />
+              </ButtonImageContainer>
+            </TwoIconsContainer>
+          </ThirdContainer>
 
-          <div className="STEP__first-container STEP_conteiner-four">
+          <FourthContainer>
             <Link to="/krok-4" className="STEP__link-button">
-              <button className="STEP__button">
-                Następny krok
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-arrow-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                  />
-                </svg>
-              </button>
+              <NextButton />
             </Link>
-          </div>
-        </div>
-      </section>
+          </FourthContainer>
+        </Container>
+      </MainContainer>
     </div>
   );
 };
