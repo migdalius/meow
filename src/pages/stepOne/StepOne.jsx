@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import NextButton from "../../components/buttons/NextButton";
 import Navigation from "../../components/nav/Navigation";
 import TopBar from "../../components/steps/TopBar";
+import { update } from "../../redux/userSlice";
 
 const MainContainer = styled.section`
   display: flex;
@@ -110,6 +113,16 @@ const FourthContainer = styled.div`
 `;
 
 const StepOne = () => {
+  const [name, setName] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handelUpdate = (e) => {
+    e.preventDefault();
+    dispatch(update({ name }));
+  };
+
+  console.log(name);
   return (
     <div className="app">
       <Navigation />
@@ -118,11 +131,11 @@ const StepOne = () => {
           <TopBar step={"1"} start={"16%"} />
           <FirstContainer>
             <SecondTitle>Jak sie nazywa twój kotek/piesek?</SecondTitle>
-            <InputOne />
+            <InputOne onChange={(e) => setName(e.target.value)} />
           </FirstContainer>
           <Line />
           <SecondContainer>
-            <SecondTitle>Jakiej płci jest "name"</SecondTitle>
+            <SecondTitle>Jakiej płci jest twój piesek?</SecondTitle>
             <TwoIconsContainer>
               <ButtonContainer>
                 <Icons src="../img/icons/chlopak.png" />
@@ -145,7 +158,7 @@ const StepOne = () => {
           <Line />
           <FourthContainer>
             <Link to="/krok-2" className="STEP__link-button">
-              <NextButton />
+              <NextButton onClick={handelUpdate} />
             </Link>
           </FourthContainer>
         </Container>

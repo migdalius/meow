@@ -1,5 +1,6 @@
 import Navigation from "../../components/nav/Navigation";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import styled, { keyframes } from "styled-components";
 import TopBar from "../../components/steps/TopBar";
@@ -108,6 +109,7 @@ const InputKg = styled.input`
 `;
 
 const StepTwo = () => {
+  const name = useSelector((state) => state.user.name);
   return (
     <div className="app">
       <Navigation />
@@ -129,9 +131,7 @@ const StepTwo = () => {
           </FirstContainer>
           <Line />
           <ThirdContainer>
-            <SecondTitle>
-              Czy "name" jest po "sterylizacji / kastracji"
-            </SecondTitle>
+            <SecondTitle>Jakiej rasy jest {name}</SecondTitle>
             <TwoIconsContainer>
               <ButtonContainer>
                 <Icons src="../img/icons/kundelek.png" />
@@ -145,7 +145,7 @@ const StepTwo = () => {
           </ThirdContainer>
           <Line />
           <ThirdContainer>
-            <SecondTitle>Ile waży "name"?</SecondTitle>
+            <SecondTitle>Ile waży {name}?</SecondTitle>
             <InputContainer>
               <Input type="number" placeholder="np: 5" />
               <InputKg type="text" placeholder="KG" disabled />
