@@ -143,9 +143,7 @@ const Hero = () => {
           <MainImage src="https://html.merku.love/petopia/assets/images/banner/cat_img_2.png" />
         </DogContainer>
         <Circle />
-        {/* <SecondCircle /> */}
       </LeftContainer>
-
       <MidContainer>
         <Title>
           <MainTitle>
@@ -160,7 +158,7 @@ const Hero = () => {
             >
               <SingleItem>
                 <SecondTitle>Pies</SecondTitle>
-                <CatImg src="https://www.szybkauprawa.pl/img/kot.png" />
+                <CatImg src="../img/pies_1.png" />
               </SingleItem>
             </Link>
           </ItemDog>
@@ -172,7 +170,7 @@ const Hero = () => {
             >
               <SingleItem>
                 <SecondTitle>Kot</SecondTitle>
-                <CatImg src="https://www.szybkauprawa.pl/img/kot.png" />
+                <CatImg src="../img/kot_1.png" />
               </SingleItem>
             </Link>
           </ItemCat>

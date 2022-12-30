@@ -9,6 +9,7 @@ import StepFour from "./pages/stepFour/StepFour";
 import StepFive from "./pages/stepFive/StepFive";
 import StepOne from "./pages/stepOne/StepOne";
 import List from "./pages/list/List";
+import SingleProduct from "./pages/singleProduct/SingleProduct";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/krok-4" element={<StepFour />} />
         <Route path="/krok-5" element={<StepFive />} />
         <Route path="/lista-produktow" element={<List />} />
+        <Route path="/lista-produktow/:id" element={<SingleProduct />} />
       </Routes>
     </BrowserRouter>
   );

@@ -126,6 +126,7 @@ const ButtonProduct = styled.button`
   border: none;
   color: #fff;
   font-size: 18px;
+  cursor: pointer;
 `;
 
 const Product = () => {
@@ -162,7 +163,7 @@ const Product = () => {
           <ImgIcons src="../img/icons/weight.png" />
         </ProductDetailEat>
         <ProductDetailBuy>
-          <ButtonProduct> Kup Karmę</ButtonProduct>
+          <ButtonProduct> Dodaj do koszyka</ButtonProduct>
         </ProductDetailBuy>
       </ProductDetail>
     </ProductCard>

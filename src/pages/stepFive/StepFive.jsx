@@ -45,6 +45,11 @@ const GridContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 `;
+
+const SecondTitle = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+`;
 const StepFive = () => {
   return (
     <div className="app">
@@ -53,11 +58,9 @@ const StepFive = () => {
         <Container>
           <TopBar step={"5"} />
           <FiveContainer>
-            <div>
-              <p className="STEP__second-title mt-60 mb-60">
-                Czy "name" jest po "sterylizacji / kastracji"
-              </p>
-            </div>
+            <SecondTitle>
+              Czy "name" jest po "sterylizacji / kastracji"
+            </SecondTitle>
             <ProblemContainer>
               <ProblemButton>Nie ma problemów</ProblemButton>
               <ProblemButton>Cierpi na</ProblemButton>
