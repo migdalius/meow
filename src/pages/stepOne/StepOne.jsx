@@ -120,6 +120,7 @@ const StepOne = () => {
   const handelUpdate = (e) => {
     e.preventDefault();
     dispatch(update({ name }));
+    console.log(e);
   };
 
   console.log(name);
